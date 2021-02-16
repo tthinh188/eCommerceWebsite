@@ -1,0 +1,17 @@
+.home {
+    height: 100%;
+    z-index: 1;
+    /* background: darksalmon; */
+}
+
+.home_container {
+    margin-left: 10px;
+    margin-right: 10px;
+    background: linear-gradient(135deg, #df8fff, #88cbf8);
+}
+
+.home_row {
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 1;
+}

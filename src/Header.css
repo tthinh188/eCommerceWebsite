@@ -1,0 +1,111 @@
+.header {
+    display: flex;
+    background-color: #131921;
+    justify-content: space-between;
+    height: 50px;
+    position: sticky;
+    align-items: center;
+    z-index: 100;
+    border-bottom: 3px solid blanchedalmond;
+}
+
+.header .header_logo {
+    width: 120px;
+    object-fit: contain;
+    padding-top: 5px;
+    cursor: pointer;
+    transition: 1s;
+    opacity: 1;
+}
+
+.header .header_logo:hover{
+    opacity: 0.7;
+    transform: skew(-10deg);
+}
+
+.header .header_search {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    margin: 8px;
+    border: 1px solid blanchedalmond;
+    width: 100%;
+}
+
+.header .header_searchInput {
+    outline-width: 0;
+    height: 12px;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.header .header_search .searchIcon {
+    background-color: #cd9042;
+    padding: 5px;
+    height: 22px i !important;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.header .header_search .searchIcon:hover {
+    background-color: #ad6d18;
+}
+
+.header_nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header_option {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 12px;
+    transition: 0.5s ease-in-out;
+}
+
+.header_option:hover {
+    cursor: pointer;
+    color: rgb(238, 221, 221);
+    transform: translateX(-1px);
+}
+
+.header_option .header_optionSmall {
+    font-size: small;
+}
+
+.header_option .header_optionLarge {
+    font-weight: 600;
+}
+
+.header_optionCart {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+    transition: 0.5s;
+}
+
+.header_optionCart:hover{
+    cursor: pointer;
+    color: rgb(238, 221, 221);
+    transform: translateX(-1px);
+}
+.item_count {
+    font-weight: 800;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header_optionCart .link{
+    color: #fff;
+}
+
+.header_optionCart .link:hover{
+    color: rgb(238, 221, 221);
+}

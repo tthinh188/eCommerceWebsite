@@ -1,0 +1,9 @@
+.app {
+    max-width: 100%;
+    animation: fadein 2s ease-in-out;
+}
+
+@keyframes fadein {
+    from { opacity: 0}
+    to   { opacity: 1}
+}
