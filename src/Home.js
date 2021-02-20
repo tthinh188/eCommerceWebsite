@@ -17,7 +17,7 @@ function Home() {
                     <Product
                         id="2"
                         title="New Apple iPhone 12 (64GB, Black) [Locked] + Carrier Subscription"
-                        price={829.00}
+                        price={829.99}
                         image="https://m.media-amazon.com/images/I/71fVoqRC0wL._FMwebp__.jpg"
                         rating={4}
                     />
@@ -55,7 +55,7 @@ function Home() {
                     <Product
                         id="7"
                         title="Love Galore White Skater Dress"
-                        price={52.00}
+                        price={52.99}
                         image="https://www.lulus.com/images/product/xlarge/6788341_516112.jpg?w=560"
                         rating={4}
                     />

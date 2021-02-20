@@ -19,18 +19,17 @@ function Login() {
         }).catch(error => alert(error.message))
     }
 
-    const register = e => {
-        e.preventDefault();
-        console.log("createa account");
-        auth
-        .createUserWithEmailAndPassword(email, password)
-        .then((auth) => {
-            console.log(auth);
-            if(auth) {
-                history.push('/')
-            }
-        }).catch(error => alert(error.message))
-    }   
+    // const register = e => {
+    //     e.preventDefault();
+    //     auth
+    //     .createUserWithEmailAndPassword(email, password)
+    //     .then((auth) => {
+    //         console.log(auth);
+    //         if(auth) {
+    //             history.push('/')
+    //         }
+    //     }).catch(error => alert(error.message))
+    // }   
 
 
     return (
@@ -65,11 +64,11 @@ function Login() {
                         > Sign in</button>
                     </form>
 
-                    <button 
-                        onClick={register}
-                        className="login_registration"> Create Account
-                    </button>
-
+                    <Link to="/register">
+                        <button 
+                            className="login_registration"> Create Account
+                        </button>
+                    </Link>
             </div>
         </div>
     )

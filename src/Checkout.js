@@ -11,16 +11,15 @@ function Checkout() {
         <div className="checkout">
             <div className="checkout_left">
                 <h2 className="checkout_title">Your Shopping Cart</h2>
-               {cart.map((item) => (
+                {cart.map((item) => (
                     <CheckOutProduct
                         id={item.id}
                         image={item.image}
                         title={item.title}
                         price={item.price}
                         rating={item.rating}
-                    />
-                    
-               ))}
+                    />    
+                ))}
             </div>
             <div className="checkout_right">
                 <Subtotal/>

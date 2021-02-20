@@ -7,12 +7,28 @@ import { useStateValue } from './StateProvider';
 import { auth } from './firebase';
 
 function Header() {
+
+    window.addEventListener('scroll', (e) =>
+    {
+        if(window.scrollY > 20) {
+            document.querySelector('.header').classList.add("fixed")
+        }
+        else {
+            document.querySelector('.header').classList.remove("fixed")
+
+        }
+    })
     const [{ cart, user }, dispatch] = useStateValue();
 
     const handleAuthentication = () =>{
         if (user) {
             auth.signOut();
         }
+    }
+
+    const getUserName = (e) => {
+        let index = e.indexOf("@");
+        return e.slice(0,index);
     }
     return (
         <div className="header">
@@ -33,14 +49,17 @@ function Header() {
             <div className="header_nav">
                 <Link to={!user && '/login'}>
                     <div className="header_option" onClick={handleAuthentication}>
-                        <span className="header_optionSmall">Hello {user ? user?.email : "Guest"}</span>
+                        <span className="header_optionSmall">Hello {user ? getUserName(user?.email) : "Guest"}</span>
                         <span className="header_optionLarge">{user ? "Sign out" : "Sign in"}</span>
                     </div>
                 </Link>
-                <div className="header_option">
-                    <span className="header_optionSmall">Returns</span>
-                    <span className="header_optionLarge">& Orders</span>
-                </div>
+
+                <Link to="/orders">
+                    <div className="header_option">
+                        <span className="header_optionSmall">Returns</span>
+                        <span className="header_optionLarge">& Orders</span>
+                    </div>
+                </Link>
                 <div className="header_option">
                     <span className="header_optionSmall">Your</span>
                     <span className="header_optionLarge">Prime</span>

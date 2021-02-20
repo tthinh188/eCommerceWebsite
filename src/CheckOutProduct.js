@@ -2,11 +2,11 @@ import React from 'react'
 import "./CheckOutProduct.css"
 import { useStateValue } from './StateProvider';
 
-function CheckOutProduct({id, image, title, price, rating}) {
+function CheckOutProduct({id, image, title, price, rating, hideButton}) {
     const [state, dispatch] = useStateValue();
 
     const removeFromCart = () => {
-        // add the item to the data layer
+        // add the item to the data layerz
         dispatch ({
             type: 'REMOVE_FROM_CART',
             item: {
@@ -33,7 +33,7 @@ function CheckOutProduct({id, image, title, price, rating}) {
                         <p>⭐</p>
                     ))}
                 </div>
-                <button onClick={removeFromCart}>Remove from Cart</button>
+                { !hideButton && <button onClick={removeFromCart}>Remove from Cart</button> }
 
             </div>
         </div>
